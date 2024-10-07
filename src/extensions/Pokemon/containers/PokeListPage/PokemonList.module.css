@@ -1,0 +1,41 @@
+.container > h1 {
+  margin-bottom: 70px;
+}
+
+.pokemon_list {
+  margin: 0 auto;
+  max-width: 700px;
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+  row-gap: 15px;
+  flex-wrap: wrap
+}
+
+.pokemon_item {
+  cursor: pointer;
+  box-shadow: 4px 3px 3px #ccc;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px 5px
+}
+.pokemon_item:hover {
+  transform: scale(1.05);
+}
+.pokemon_item img {
+  width: 100px;
+  height: 100px
+}
+.pokemon_item p {
+  white-space: nowrap; 
+  width: 100px; 
+  overflow: hidden;
+  text-overflow: clip; 
+}
+.pokemon_pagination {
+  display: flex;
+	justify-content: center;
+  gap: 16px;
+  align-items: center;
+  margin-top: 30px;
+}
