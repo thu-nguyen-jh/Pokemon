@@ -1,5 +1,5 @@
 import { Action, Dispatch } from "redux";
-import { RootState } from "../../../../../lib/store";
+import { RootState } from "../../../../../store";
 
 
 export const defaultPageQuery: PokemonPageQuery = {

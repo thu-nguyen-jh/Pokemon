@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { PokemonDataResponse } from "../PokeListPage.duck";
-import style from "../PokemonList.module.css";
+import css from "../PokemonList.module.css";
 
 const PokeItem = ({ pokemon }: { pokemon: PokemonDataResponse }) => {
   const navigate = useNavigate();
@@ -10,11 +10,13 @@ const PokeItem = ({ pokemon }: { pokemon: PokemonDataResponse }) => {
     navigate(`/pokemon/${id}`);
   };
   return (
-    <div className={style.pokemon_item} onClick={handleClick}>
-      <img
-        src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
-        alt=""
-      />
+    <div className={css.pokemonItem} onClick={handleClick}>
+      <div className={css.pokemonItemImage}>
+        <img
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
+          alt={name}
+        />
+      </div>
       <p>{name}</p>
     </div>
   );

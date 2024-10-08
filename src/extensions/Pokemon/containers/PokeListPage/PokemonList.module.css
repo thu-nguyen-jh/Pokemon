@@ -2,7 +2,7 @@
   margin-bottom: 70px;
 }
 
-.pokemon_list {
+.pokemonList {
   margin: 0 auto;
   max-width: 700px;
   display: flex;
@@ -12,27 +12,37 @@
   flex-wrap: wrap
 }
 
-.pokemon_item {
+.pokemonItem {
   cursor: pointer;
   box-shadow: 4px 3px 3px #ccc;
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 10px 5px
 }
-.pokemon_item:hover {
+.pokemonItem:hover {
   transform: scale(1.05);
 }
-.pokemon_item img {
+.pokemonItemImage {
   width: 100px;
-  height: 100px
+  height: 100px;
+  overflow: hidden; /* Hide any overflow */
+  display: flex; /* Center the image */
+  justify-content: center;
+  align-items: center;
 }
-.pokemon_item p {
+.pokemonItemImage img {
+  width: 100%; /* Scale the image to the container's width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Crop the image if necessary */
+}
+.pokemonItem p {
   white-space: nowrap; 
   width: 100px; 
   overflow: hidden;
   text-overflow: clip; 
 }
-.pokemon_pagination {
+
+.pokemonPagination {
   display: flex;
 	justify-content: center;
   gap: 16px;

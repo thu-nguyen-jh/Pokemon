@@ -1,7 +1,7 @@
 import { Action, Dispatch } from "redux";
 import { defaultPageQuery, PaginationActionType, SET_TOTAL_PAGE } from "./components/Pagination.duck";
-import { baseUrlPokemonsAPI, callApi } from "../../../../api";
-import { RootState } from "../../../../lib/store";
+import { baseUrlPokemonsAPI, fetchPokemonsAPI } from "../../../../api";
+import { RootState } from "../../../../store";
 
 
 //initial state
@@ -102,8 +102,8 @@ export const fetchPokemons = (query = defaultPageQuery) => {
 		const offset = query.page * query.itemPerPage;
 
 		try {
-			const data: PokemonsAPIResponse = await callApi(
-				`${baseUrlPokemonsAPI}?limit=${limit}&offset=${offset}`
+			const data: PokemonsAPIResponse = await fetchPokemonsAPI(
+				{offset: offset, limit: limit}
 			);
 		
 			dispatch({
